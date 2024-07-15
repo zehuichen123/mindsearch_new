@@ -4,15 +4,15 @@ export const headerData = {
   links: [
     {
       text: 'Home',
-      href: '/'
+      href: '/mindsearch'
     },
     {
       text: 'Demo',
-      href: '/demo',
+      href: '/mindsearch/demo',
     },
     {
       text: 'Blog',
-      href: '/blog',
+      href: '/mindsearch/blog',
     },
     {
       text: 'Code',
@@ -99,8 +99,8 @@ export const footerData = {
   //   },
   // ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms', href: getPermalink('/mindsearch/terms') },
+    { text: 'Privacy Policy', href: getPermalink('/mindsearch/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
