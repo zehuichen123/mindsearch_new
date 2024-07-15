@@ -10,6 +10,8 @@ import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
 
+import { defineConfig } from 'astro/config';
+
 import astrowind from './vendor/integration';
 
 import {
@@ -26,6 +28,8 @@ const whenExternalScripts = (items = []) =>
 
 export default defineConfig({
   output: 'static',
+  site: 'https://lovesnowbest.site',
+  base: 'mindsearch',
 
   integrations: [
     tailwind({
