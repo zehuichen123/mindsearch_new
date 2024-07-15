@@ -1,0 +1,55 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Startup Landing Page',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Source Code',
+        href: 'https://github.com/internlm/lagent',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '/' },
+    ]}
+  >
+    <Fragment slot="title">
+      Watch videos on how <span class="dark:text-white highlight" style="color:rgb(0, 114, 227)">MindSearch</span> solve real-world questions
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The video shows the full solution path of MindSearch to the question. It collects detailed information by browsing 300+ webpages and summarizes high-quality answer in 1 min.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+</Layout>
